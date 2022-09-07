@@ -4,7 +4,10 @@ This is a Fleet Management application made following a tutorial.
 
 It is made using the following technologies:
 Java
+Spring
 Spring Boot
+SQL
+Hibernate
 MySQL
 
 
