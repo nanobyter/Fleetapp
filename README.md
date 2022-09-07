@@ -9,6 +9,10 @@ Spring Boot
 SQL
 Hibernate
 MySQL
+HTML
+CSS
+Bootstrap
+JavaScript
 
 
 
