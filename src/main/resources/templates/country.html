@@ -527,21 +527,41 @@
 				<!-- Left side columns -->
 				<div class="col-lg-8">
 					<div class="row">
-	
-					<h1>List of Countries</h1>
-	
+
+						<h1>List of Countries</h1>
+
+						<table class="table">
+							<thead>
+								<tr>
+									<th scope="col">id</th>
+									<th scope="col">Description</th>
+									<th scope="col">Capital</th>
+									<th scope="col">Code</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr th:each="country:${countries}">
+									<td th:text="${country.id}"></td>
+									<td th:text="${country.description}"></td>
+									<td th:text="${country.capital}"></td>
+									<td th:text="${country.code}"></td>
+								</tr>
+							</tbody>
+						</table>
+
+
 					</div>
 				</div><!-- End Left side columns -->
 
 				<!-- Right side columns -->
 				<div class="col-lg-4">
 
-					
 
-					
 
-					
-					
+
+
+
+
 
 				</div><!-- End Right side columns -->
 
@@ -553,7 +573,8 @@
 	<!-- ======= Footer ======= -->
 	<footer id="footer" class="footer">
 		<div class="copyright">
-			&copy; Copyright <strong><span><a href="https://www.nanobyter.tech/" target=”_blank”>nanobyter</a></span></strong>. All Rights Reserved
+			&copy; Copyright <strong><span><a href="https://www.nanobyter.tech/"
+						target=”_blank”>nanobyter</a></span></strong>. All Rights Reserved
 		</div>
 	</footer><!-- End Footer -->
 
