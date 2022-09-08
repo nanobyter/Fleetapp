@@ -1,6 +1,12 @@
 package tech.nanobyter.fleetapp.services;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import tech.nanobyter.fleetapp.models.Country;
+import tech.nanobyter.fleetapp.repositories.CountryRepository;
 
 /**
  * @author nanobyter Created: 2022-09-07
@@ -10,4 +16,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class CountryService {
 
+	@Autowired
+	private CountryRepository countryRepository;
+	
+	public List<Country> getCountries(){
+		return countryRepository.findAll();
+	}
+	
 }
