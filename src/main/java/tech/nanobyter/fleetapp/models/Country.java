@@ -44,14 +44,6 @@ public class Country {
 		super();
 	}
 
-	public Country(Integer id, String code, String capital, String description) {
-		super();
-		this.id = id;
-		this.code = code;
-		this.capital = capital;
-		this.description = description;
-	}
-
 	public Integer getId() {
 		return id;
 	}

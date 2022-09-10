@@ -525,11 +525,16 @@
 			<div class="row">
 
 				<!-- Left side columns -->
-				<div class="col-lg-8">
-					<div class="row">
+				<div class="row">
+					<div class="col-lg-8">
 
 						<h1>List of Countries</h1>
 
+						<!-- Bootstrap button modal -->
+						<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal"
+							data-whatever="@mdo">New Country</button>
+
+						<!-- Country table -->
 						<table class="table">
 							<thead>
 								<tr>
@@ -556,13 +561,6 @@
 				<!-- Right side columns -->
 				<div class="col-lg-4">
 
-
-
-
-
-
-
-
 				</div><!-- End Right side columns -->
 
 			</div>
@@ -580,6 +578,51 @@
 
 	<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
 			class="bi bi-arrow-up-short"></i></a>
+
+	<!-- Modal content -->
+	<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">New message</h5>
+					<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form th:action="@{/countries/addNew}" method="post">
+						<div class="form-group">
+							<label for="recipient-name" class="col-form-label">Description:</label>
+							<input type="text" class="form-control" id="recipient-name" name="description">
+						</div>
+						<div class="form-group">
+							<label for="recipient-name" class="col-form-label">Capital:</label>
+							<input type="text" class="form-control" id="recipient-name" name="capital">
+						</div>
+						<div class="form-group">
+							<label for="recipient-name" class="col-form-label">Code:</label>
+							<input type="text" class="form-control" id="recipient-name" name="code">
+						</div>
+						<div class="form-group">
+							<label for="recipient-name" class="col-form-label">Continent:</label>
+							<input type="text" class="form-control" id="recipient-name" name="continent">
+						</div>
+						<div class="form-group">
+							<label for="recipient-name" class="col-form-label">Nationality:</label>
+							<input type="text" class="form-control" id="recipient-name" name="nationality">
+						</div>
+						<div class="form-group">
+							<button type="submit" class="btn btn-primary">Submit</button>
+							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<!-- Vendor JS Files -->
 	<script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
