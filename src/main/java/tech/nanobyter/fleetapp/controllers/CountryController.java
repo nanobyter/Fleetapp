@@ -7,6 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import tech.nanobyter.fleetapp.models.Country;
 import tech.nanobyter.fleetapp.services.CountryService;
@@ -34,5 +36,11 @@ public class CountryController {
 		countryService.save(country);
 		return "redirect:/countries";
 	}
-	
+
+	@RequestMapping(value = "/countries/update", method = { RequestMethod.PUT, RequestMethod.GET })
+	public String update(Country country) {
+		countryService.save(country);
+		return "redirect:/countries";
+	}
+
 }
